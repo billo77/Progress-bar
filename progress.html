@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Progress_Bar</title>
+</head>
+<body>
+    <h1>Progress Bar ;</h1><br>
+    <div id="bar">
+    <div id="bar2">10 %</div>
+    </div>
+    <br>
+    <button onclick="test()">Download</button>
+       
+        
+<script>
+    function test(){
+        var bar = document.getElementById('bar2');
+        var num = 10;
+        var id = setInterval(function(){
+            if(num >= 100){
+                clearInterval(id);
+            }
+            else {
+                num++;
+                bar.style.width = num + '%';
+                bar.innerHTML = num + '%';
+            }
+        },200);
+    }
+</script>
+</body>
+</html>
